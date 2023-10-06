@@ -4,13 +4,12 @@
     <% @posts.each do |post| %>
         <div class="post_card">
             <% if user_signed_in? %>
-                <span class="post_author"><%= post.user.name %></span>
+                <p class="post_author"><%= post.user.email %></p>
             <% end %>
             
-            <p><%= post.content %></p>
+            <p  class="post_content"><%= post.content %></p>
         </div>
     <% end %>
 
+    <span class="post_new"><%= link_to "New Post", new_post_path %></span>
 </div>
-
-<%= link_to "New Post", new_post_path %>
