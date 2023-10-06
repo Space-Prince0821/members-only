@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "posts#index"
+  # Add a route to update the user's last activity
+  post '/update_activity', to: 'application#update_activity'
 end
